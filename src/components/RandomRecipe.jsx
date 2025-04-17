@@ -9,12 +9,14 @@ export default function RandomRecipe() {
   }, []);
 
   return recipe ? (
-    <div>
-      <h2>{recipe.strMeal}</h2>
-      <img src={recipe.strMealThumb} width={300} />
+    <div className="recipe-card">
+      <h2>🌟 Recipe of the Day 🌟</h2>
+      <h3>{recipe.strMeal}</h3>
+      <img src={recipe.strMealThumb} alt={recipe.strMeal} />
       <p>{recipe.strInstructions}</p>
     </div>
   ) : (
     <p>Loading...</p>
   );
 }
+
